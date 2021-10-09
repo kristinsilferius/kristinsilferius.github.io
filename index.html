@@ -42,7 +42,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-
+	<meta name="description" content="Kristin and Silferius Wedding">
 	<!-- 
 	TEMPLATE BY http://gettemplates.co/
 	TEMPLATE BY http://gettemplates.co/
@@ -309,8 +309,11 @@
 				
 				toWho = param[1];
 			}
-
 			$('#hero').prepend(`<h5 class="hero-invitation">Dear Mr/Mrs ${toWho},<br> you are cordially invited to the wedding of</h5>`);
+			var _content = `${toWho} you are invited to Kristin&Silferius Wedding`
+			$('meta[name=description]').remove();
+   			$('head').append( `<meta name="description" content="${_content}">` );
+		
 		}
 	</script>
 
