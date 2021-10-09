@@ -24,6 +24,14 @@ body {
   background: #fff;
 }
 
+.hero-invitation {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  margin-bottom: 50px;
+}
+
 .container-thanks {
   background-color: rgb(245 232 234);
   width: 100%;

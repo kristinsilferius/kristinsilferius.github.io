@@ -86,11 +86,11 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
 						<div class="display-t">
-							<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<div id="hero" class="display-tc animate-box" data-animate-effect="fadeIn">
 								<h1>Kristin &amp; Silferius</h1>
 								<h2>We Are Getting Married</h2>
 								<div class="simply-countdown simply-countdown-one"></div>
-								<p><a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MjJhMHQ4aW1kcW10Y29zM2VvNDBzajJnb3EgYnJpbHlhbmxhaWFAbQ&tmsrc=brilyanlaia%40gmail.com" class="btn btn-default btn-sm">Save the date</a></p>
+								<p><a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MjJhMHQ4aW1kcW10Y29zM2VvNDBzajJnb3EgYnJpbHlhbmxhaWFAbQ&tmsrc=brilyanlaia%40gmail.com" class="btn btn-default btn-sm">Save to Google Calendar</a></p>
 							</div>
 						</div>
 					</div>
@@ -281,6 +281,7 @@
 
 	<script>
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+		var toWho = "";
 
 		// default example
 		simplyCountdown('.simply-countdown-one', {
@@ -298,6 +299,19 @@
 			day: d.getDate(),
 			enableUtc: false
 		});
+
+		const params = new URLSearchParams(window.location.search)
+
+		if(params.has('to')){
+			console.log('params',params.values())
+			for (const param of params) {
+				console.log(param)
+				
+				toWho = param[1];
+			}
+
+			$('#hero').prepend(`<h5 class="hero-invitation">Dear Mr/Mrs ${toWho},<br> you are cordially invited to the wedding of</h5>`);
+		}
 	</script>
 
 	
