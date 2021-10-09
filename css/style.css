@@ -24,6 +24,11 @@ body {
   background: #fff;
 }
 
+.norek {
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
 .sub-header {
   font-size: 25px;
   color: white;
@@ -280,6 +285,14 @@ figure {
   background-image: url(../images/bg-1.jpeg);
 }
 
+.bg-contact {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: rgb(245 232 234);
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-bg {
     background-image: url(../images/bg-1-mobile.jpeg) !important;
@@ -357,7 +370,7 @@ figure {
   position: relative;
   width: 100%;
   background-image: url(../images/bg-2.jpeg);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .fh5co-cover .overlay {
   z-index: 0;
@@ -1300,6 +1313,11 @@ form label {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+
+blockquote {
+  border-left: 5px solid #f5e7ea !important;
+}
+
 #fh5co-testimonial .wrap-testimony .testimony-slide blockquote {
   border: none;
   margin: 30px auto;
@@ -1405,15 +1423,19 @@ form label {
   background: rgba(0, 0, 0, 0.4);
 }
 #fh5co-started .fh5co-heading h2 {
-  color: #fff;
+  color: #3e3030;
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 30px;
 }
 #fh5co-started .fh5co-heading p {
-  color: rgba(255, 255, 255, 0.5);
+  color: #3e3030;
 }
 #fh5co-started .form-control {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(117 90 90 / 20%);
   border: none !important;
-  color: #fff;
+  color: #000;
   font-size: 16px !important;
   width: 100%;
   -webkit-transition: 0.5s;
@@ -1435,13 +1457,14 @@ form label {
   color: #fff;
 }
 #fh5co-started .form-control:focus {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(117 90 90 / 20%);
 }
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #f14e95;
-  color: #fff;
+  border-radius: 0;
+  background: #f5f5f5;
+  color: #353232;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
