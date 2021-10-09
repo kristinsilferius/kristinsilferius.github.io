@@ -312,6 +312,7 @@
 			$('#hero').prepend(`<h5 class="hero-invitation">Dear Mr/Mrs ${toWho},<br> you are cordially invited to the wedding of</h5>`);
 			var _content = `${toWho} you are invited to Kristin&Silferius Wedding`
 			$('meta[name=description]').remove();
+			document.title = `Invitation for Mr/Mrs ${toWho}`;
    			$('head').append( `<meta name="description" content="${_content}">` );
 		
 		}
